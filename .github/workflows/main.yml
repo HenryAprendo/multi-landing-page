@@ -39,7 +39,7 @@ jobs:
 
       # Route file renaming
       - name: Rename index for routing
-        run: mv dist/angular-poc/index.html dist/multi-landing-page/404.html
+        run: mv dist/multi-landing-page/index.html dist/multi-landing-page/404.html
 
       # Deploy to Github pages
       - name: Deploy to pages
