@@ -14,7 +14,7 @@ module.exports = {
         JosefinSans: ['"Josefin Sans"'],
       },
       backgroundImage: {
-        'banner-mobile-hero-le': "url('./src/assets/loopstudios/images/mobile/image-hero.jpg')",
+        'banner-mobile-hero-le': "url('/assets/loopstudios/images/mobile/image-hero.jpg')",
       }
     },
   },
