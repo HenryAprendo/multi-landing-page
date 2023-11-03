@@ -1,5 +1,5 @@
 <!-- Banner -->
-<section class="min-w-[320px] w-full h-[700px] px-[6%] pt-12 bg-banner-mobile-hero-le bg-center bg-no-repeat bg-cover object-cover md:px-0 md:bg-right-top">
+<section class="min-w-[320px] w-full h-[700px] px-[6%] pt-12 bg-banner-mobile-hero-le bg-center bg-no-repeat bg-cover object-cover md:px-0 md:bg-right-top xl:bg-banner-desktop-hero-le xl:bg-center">
   <div class="max-w-2xl mx-auto xl:max-w-5xl">
     <header>
       <div class="flex items-center justify-between h-16">
@@ -14,7 +14,7 @@
             <ul class="flex gap-x-4">
               <li *ngFor="let link of links">
                 <a href="" class="group text-white w-20 flex flex-col items-center" >
-                  <span class="block py-2">{{link.name}}</span>
+                  <span class="block py-2 group-hover:font-medium">{{link.name}}</span>
                   <hr class="hidden w-full group-hover:block" />
                 </a>
               </li>
@@ -23,8 +23,8 @@
         </div>
       </div>
     </header>
-    <section class="mt-44 flex justify-center xl:justify-start">
-      <ul class="w-full max-w-md p-7 border border-white text-white text-3xl uppercase">
+    <section class="mt-44 flex justify-center xl:justify-start xl:mt-40">
+      <ul class="w-full max-w-md p-7 border border-white text-white text-3xl uppercase xl:text-6xl xl:tracking-widest xl:font-light xl:max-w-xl">
         <li>immersive</li>
         <li>experiencies</li>
         <ul class="flex flex-col xl:flex-row xl:gap-x-3">
