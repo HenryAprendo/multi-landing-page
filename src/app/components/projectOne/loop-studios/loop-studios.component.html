@@ -2,7 +2,7 @@
 <section class="min-w-[320px] w-full h-[700px] px-[6%] pt-12 bg-banner-mobile-hero-le bg-center bg-no-repeat bg-cover object-cover md:px-0 md:bg-right-top">
   <div class="max-w-2xl mx-auto xl:max-w-5xl">
     <header>
-      <div class="flex items-center justify-between">
+      <div class="flex items-center justify-between h-16">
         <figure>
           <img src="./assets/loopstudios/images/logo.svg" alt="logo" class="w-36">
         </figure>
@@ -11,9 +11,12 @@
             <svg width="24" height="16" xmlns="http://www.w3.org/2000/svg"><g fill="#FFF" fill-rule="evenodd"><path d="M0 0h24v2H0zM0 7h24v2H0zM0 14h24v2H0z"/></g></svg>
           </div>
           <nav class="hidden xl:block">
-            <ul>
+            <ul class="flex gap-x-4">
               <li *ngFor="let link of links">
-                <a href="">{{link.name}}</a>
+                <a href="" class="group text-white w-20 flex flex-col items-center" >
+                  <span class="block py-2">{{link.name}}</span>
+                  <hr class="hidden w-full group-hover:block" />
+                </a>
               </li>
             </ul>
           </nav>
