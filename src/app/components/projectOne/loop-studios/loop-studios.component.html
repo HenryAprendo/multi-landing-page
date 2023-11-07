@@ -13,10 +13,7 @@
           <nav class="hidden xl:block">
             <ul class="flex gap-x-4">
               <li *ngFor="let link of links">
-                <a href="" class="group text-white w-20 flex flex-col items-center" >
-                  <span class="block py-2 group-hover:font-medium">{{link.name}}</span>
-                  <hr class="hidden w-full group-hover:block" />
-                </a>
+                <app-item-nav [linkTitle]="link.name" />
               </li>
             </ul>
           </nav>
@@ -163,12 +160,9 @@
           </figure>
           <nav>
             <ul class="flex flex-col items-center space-y-3 md:flex-row md:gap-x-4 md:space-y-0">
-              <li *ngFor="let link of links">
-                <a href="" class="group text-white w-auto flex flex-col items-center h-10" >
-                  <span class="block py-2 group-hover:font-medium">{{link.name}}</span>
-                  <hr class="hidden w-1/3 group-hover:block" />
-                </a>
-              </li>
+              <ng-container *ngFor="let link of links">
+                <app-item-nav [linkTitle]="link.name" navPosition="bottom" />
+              </ng-container>
             </ul>
           </nav>
         </div>
