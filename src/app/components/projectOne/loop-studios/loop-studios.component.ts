@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { loopsLinks } from '../../../data/links-loopStudios';
 import { IconSocialComponent } from '../icon-social/icon-social.component';
@@ -16,5 +16,11 @@ import { ImageCardComponent } from '../image-card/image-card.component';
 export class LoopStudiosComponent {
 
   links = loopsLinks.slice();
+
+  menuMobile = signal(false);
+
+  toggleMenuState(){
+    this.menuMobile.update(state => !state);
+  }
 
 }

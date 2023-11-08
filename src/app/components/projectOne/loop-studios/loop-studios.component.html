@@ -8,7 +8,12 @@
         </figure>
         <div>
           <div class="xl:hidden">
-            <svg width="24" height="16" xmlns="http://www.w3.org/2000/svg"><g fill="#FFF" fill-rule="evenodd"><path d="M0 0h24v2H0zM0 7h24v2H0zM0 14h24v2H0z"/></g></svg>
+
+            <!-- icon menu -->
+            <svg (click)="toggleMenuState()" *ngIf="!menuMobile()" class="cursor-pointer" width="24" height="16" xmlns="http://www.w3.org/2000/svg"><g fill="#FFF" fill-rule="evenodd"><path d="M0 0h24v2H0zM0 7h24v2H0zM0 14h24v2H0z"/></g></svg>
+
+            <!-- Icon close -->
+            <svg (click)="toggleMenuState()" *ngIf="menuMobile()"  class="cursor-pointer" width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M17.778.808l1.414 1.414L11.414 10l7.778 7.778-1.414 1.414L10 11.414l-7.778 7.778-1.414-1.414L8.586 10 .808 2.222 2.222.808 10 8.586 17.778.808z" fill="#FFF" fill-rule="evenodd"/></svg>
           </div>
           <nav class="hidden xl:block">
             <ul class="flex gap-x-4">
@@ -146,6 +151,35 @@
       </div>
     </div>
 </footer>
+
+
+<!-- Menu mobile -->
+<ng-container *ngIf="menuMobile()" >
+  <div class="absolute inset-0 bg-black px-5 py-6 xl:hidden">
+    <ul class="flex items-center justify-between mb-6">
+      <li>
+        <figure>
+          <img src="./assets/loopstudios/images/logo.svg" alt="logo" class="w-36">
+        </figure>
+      </li>
+      <li>
+        <!-- Icon close -->
+        <svg (click)="toggleMenuState()" *ngIf="menuMobile()" class="cursor-pointer" width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M17.778.808l1.414 1.414L11.414 10l7.778 7.778-1.414 1.414L10 11.414l-7.778 7.778-1.414-1.414L8.586 10 .808 2.222 2.222.808 10 8.586 17.778.808z" fill="#FFF" fill-rule="evenodd"/></svg>
+      </li>
+    </ul>
+
+    <ul class="flex flex-col gap-y-5 uppercase">
+      <li *ngFor="let link of links">
+        <app-item-nav [linkTitle]="link.name" />
+      </li>
+    </ul>
+  </div>
+</ng-container>
+
+
+
+
+
 
 
 

@@ -11,7 +11,16 @@ import { CommonModule } from '@angular/common';
   selector: 'app-image-card',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './image-card.component.html',
+  template: `
+    <article class="relative">
+      <figure>
+        <picture>
+          <ng-content></ng-content>
+        </picture>
+        <ng-content select="[subtitle]" ></ng-content>
+      </figure>
+    </article>
+  `,
   styles: [
   ]
 })
