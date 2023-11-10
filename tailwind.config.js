@@ -31,6 +31,8 @@ module.exports = {
       backgroundImage: {
         'banner-mobile-hero-le': "url('./assets/loopstudios/images/mobile/image-hero.jpg')",
         'banner-desktop-hero-le': "url('./assets/loopstudios/images/desktop/image-hero.jpg')",
+
+
       }
     },
   },
