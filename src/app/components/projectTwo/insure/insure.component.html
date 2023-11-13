@@ -1,7 +1,7 @@
 <div class="text-base font-karla">
   <main>
 
-    <!-- Introduction -->
+    <!-- Introducción -->
     <section>
       <figure class="sm:hidden">
         <img class="w-full h-auto" src="./assets/insure/images/image-intro-mobile.jpg" alt="family">
@@ -21,7 +21,25 @@
       </div>
     </section>
 
-
+    <!-- Diferenciales -->
+    <section>
+      <div class="relative pt-24 pb-24 px-6">
+        <div class="max-w-3xl mx-auto xl:max-w-5xl">
+          <div class="flex flex-col items-center">
+            <hr class="w-28 text-dark-violet-ensure" />
+            <h2 class="font-DMserifDisplay text-3xl mt-3" >We're different</h2>
+            <section class="mt-16 mb-24 flex flex-col gap-y-10 sm:flex-row">
+              <ng-container *ngFor="let item of cards" >
+                <app-card [card]="item" />
+              </ng-container>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
 
   </main>
 </div>
+
+
+
