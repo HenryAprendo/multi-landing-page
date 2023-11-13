@@ -17,23 +17,30 @@
           <img class="hidden absolute top-0 right-0 sm:block " src="./assets/insure/images/image-intro-mobile.jpg" alt="family">
         </div>
         <img class="absolute left-0 top-0" src="./assets/insure/images/bg-pattern-intro-left-mobile.svg" alt="intro left">
-        <img class="absolute right-0 -bottom-[39%]" src="./assets/insure/images/bg-pattern-intro-right-mobile.svg" alt="intro right">
+        <img class="absolute right-0 -bottom-[39%] sm:hidden" src="./assets/insure/images/bg-pattern-intro-right-mobile.svg" alt="intro right">
       </div>
     </section>
 
     <!-- Diferenciales -->
     <section>
-      <div class="relative pt-24 pb-24 px-6">
+      <div class="relative pt-24 pb-24 px-6 sm:pt-32">
         <div class="max-w-3xl mx-auto xl:max-w-5xl">
-          <div class="flex flex-col items-center">
+          <div class="flex flex-col items-center sm:items-start">
             <hr class="w-28 text-dark-violet-ensure" />
-            <h2 class="font-DMserifDisplay text-3xl mt-3" >We're different</h2>
+            <h2 class="font-DMserifDisplay text-3xl mt-5" >We're different</h2>
             <section class="mt-16 mb-24 flex flex-col gap-y-10 sm:flex-row">
               <ng-container *ngFor="let item of cards" >
                 <app-card [card]="item" />
               </ng-container>
             </section>
           </div>
+          <section>
+            <div class="relative bg-dark-violet-ensure text-very-light-gray-ensure font-DMserifDisplay flex flex-col items-center justify-center px-6 py-20 h-80">
+              <h3 class="text-3xl text-center mb-8 ">Find out more about how we work</h3>
+              <a class="w-32 border-2 py-2 uppercase text-center font-karla text-sm" >How we work</a>
+              <img class="absolute right-0 top-0" src="./../../../../assets/insure/images/bg-pattern-how-we-work-mobile.svg" alt="how we work pattern">
+            </div>
+          </section>
         </div>
       </div>
     </section>
