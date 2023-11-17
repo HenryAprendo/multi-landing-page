@@ -7,7 +7,7 @@ import { CardInsure } from 'src/app/data/card-different';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <article class="flex flex-col items-center gap-y-3 text-center max-w-xs xl:items-start xl:text-left xl:gap-x-3">
+    <article class="flex flex-col items-center gap-y-3 text-center max-w-xs sm:gap-x-3 xl:items-start xl:text-left xl:gap-y-6">
       <img [src]="card.icon" [alt]="card.title">
       <h3 class="text-2xl font-DMserifDisplay">{{card.title}}</h3>
       <p class="text-sm text-dark-grayish-violet-ensure">{{card.description}}</p>

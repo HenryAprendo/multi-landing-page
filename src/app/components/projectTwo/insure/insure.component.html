@@ -11,7 +11,7 @@
           <div class="flex flex-col items-center text-center text-very-light-gray-ensure font-DMserifDisplay max-w-xs mx-auto gap-y-4 sm:items-start sm:text-left sm:mx-0 xl:max-w-md xl:gap-y-8">
             <hr class="hidden w-28 sm:block xl:mb-7"/>
             <h2 class="text-3xl xl:text-6xl">Humanizing your insurance.</h2>
-            <p class="font-karla xl:text-sm">Get your life insurance coverage easier and faster. We blend our expertirse and technology to help you find the plan that's right fot you. Ensure you and find loved ones are protected.</p>
+            <p class="font-karla xl:text-[15px]">Get your life insurance coverage easier and faster. We blend our expertirse and technology to help you find the plan that's right fot you. Ensure you and find loved ones are protected.</p>
             <a href="" class="w-32 border-2 py-2 uppercase text-center font-karla" >view plans</a>
           </div>
           <img class="hidden absolute top-0 right-0 sm:block " src="./assets/insure/images/image-intro-mobile.jpg" alt="family">
@@ -30,22 +30,23 @@
 
     <!-- Diferenciales -->
     <section>
-      <div class="relative pt-24 pb-24 px-6 sm:pt-32">
+      <div class="relative pt-24 pb-24 px-6 sm:pt-32 xl:pt-64 xl:pb-40">
         <div class="max-w-3xl mx-auto xl:max-w-5xl">
           <div class="flex flex-col items-center sm:items-start">
-            <hr class="w-28 text-dark-violet-ensure" />
-            <h2 class="font-DMserifDisplay text-3xl mt-5" >We're different</h2>
-            <section class="mt-16 mb-24 flex flex-col gap-y-10 sm:flex-row">
+            <hr class="w-28 text-dark-violet-ensure xl:border-2" />
+            <h2 class="font-DMserifDisplay text-3xl mt-5 xl:text-5xl xl:mt-12" >We're different</h2>
+            <section class="w-full mt-16 mb-24 flex flex-col gap-y-10 sm:flex-row sm:justify-between">
               <ng-container *ngFor="let item of cards" >
                 <app-card [card]="item" />
               </ng-container>
             </section>
           </div>
           <section>
-            <div class="relative bg-dark-violet-ensure text-very-light-gray-ensure font-DMserifDisplay flex flex-col items-center justify-center px-6 py-20 h-80">
-              <h3 class="text-3xl text-center mb-8 ">Find out more about how we work</h3>
+            <div class="relative bg-dark-violet-ensure text-very-light-gray-ensure font-DMserifDisplay flex flex-col items-center justify-center px-6 py-20 h-80 xl:flex-row xl:justify-between xl:px-16 xl:h-[250px]">
+              <h3 class="text-3xl text-center mb-8 xl:text-5xl xl:max-w-[420px] xl:text-left xl:mb-0">Find out more about how we work</h3>
               <a class="w-32 border-2 py-2 uppercase text-center font-karla text-sm" >How we work</a>
-              <img class="absolute right-0 top-0" src="./../../../../assets/insure/images/bg-pattern-how-we-work-mobile.svg" alt="how we work pattern">
+              <img class="absolute right-0 top-0 xl:hidden" src="./assets/insure/images/bg-pattern-how-we-work-mobile.svg" alt="how we work pattern">
+              <img class="hidden absolute right-0 top-0 xl:block" src="./../../../../assets/insure/images/bg-pattern-how-we-work-desktop.svg" alt="how we work pattern">
             </div>
           </section>
         </div>
