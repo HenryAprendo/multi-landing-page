@@ -56,9 +56,9 @@
   </main>
 
   <footer>
-    <section class="relative">
+    <section class="relative bg-very-light-gray-ensure">
       <div class="max-w-3xl mx-auto xl:max-w-5xl">
-        <div class="mx-6 py-16 sm:py-6">
+        <div class="px-6 py-16 sm:py-6 xl:px-0">
 
           <!-- logo -->
           <div class="flex flex-col gap-y-5 items-center border-b py-12 sm:flex-row sm:justify-between sm:py-9">
@@ -93,9 +93,9 @@
               </li>
             </ul>
           </div>
-          <div class="flex flex-col items-center mt-12 sm:flex-row sm:gap-x-24 sm:items-start">
+          <div class="flex flex-col items-center mt-12 sm:flex-row sm:gap-x-24 sm:items-start xl:gap-x-44">
             <ng-container *ngFor="let list of links">
-              <div class="mb-5 uppercase font-karla text-sm text-center" >
+              <div class="mb-5 uppercase font-karla text-sm text-center xl:text-left" >
                 <h2 class="mb-5 text-dark-grayish-violet-ensure">{{list.title}}</h2>
                 <ul class="text-very-dark-violet-ensure space-y-1 font-light" >
                   <li *ngFor="let item of list.links">
@@ -107,7 +107,8 @@
           </div>
         </div>
       </div>
-      <img class="absolute inset-0" src="./../../../../assets/insure/images/bg-pattern-footer-mobile.svg" alt="background mobile footer">
+      <img class="absolute inset-0 xl:hidden" src="./../../../../assets/insure/images/bg-pattern-footer-mobile.svg" alt="background mobile footer">
+      <img class="hidden absolute inset-0 xl:block" src="./../../../../assets/insure/images/bg-pattern-footer-desktop.svg" alt="background mobile footer">
     </section>
   </footer>
 </div>
