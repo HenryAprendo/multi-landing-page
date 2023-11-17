@@ -1,32 +1,35 @@
-<div class="text-base font-karla">
 
-  <header class="h-16 px-6 bg-very-light-gray-ensure max-w-3xl mx-auto xl:max-w-5xl xl:px-0">
-    <div class="h-full flex justify-between items-center">
-      <div>
-        <figure>
-          <img src="./assets/insure/images/logo.svg" alt="logo">
-        </figure>
-      </div>
-      <div class="flex items-center">
-        <div class="sm:hidden">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><g fill="none" fill-rule="evenodd"><path fill="#FFF" stroke="#2C2830" stroke-width="1.5" d="M.75.75h30.5v30.5H.75z"/><g fill="#2C2830"><path d="M8 10h16v1.5H8zM8 15h16v1.5H8zM8 20h16v1.5H8z"/></g></g></svg>
+<div class="text-base font-karla">
+  <header class="bg-very-light-gray-ensure relative z-10">
+    <div class="h-16 px-6 max-w-3xl mx-auto xl:max-w-5xl xl:px-0">
+      <div class="h-full flex justify-between items-center">
+        <div>
+          <figure>
+            <img src="./assets/insure/images/logo.svg" alt="logo">
+          </figure>
         </div>
-        <nav class="hidden z-10 sm:block">
-          <ul class="flex items-center gap-x-8 uppercase text-sm text-dark-grayish-violet-ensure font-semibold xl:gap-x-10">
-            <li class="hover:cursor-pointer hover:text-very-dark-violet-ensure">
-              <a href="">how we work</a>
-            </li>
-            <li class="hover:cursor-pointer hover:text-very-dark-violet-ensure">
-              <a href="">blog</a>
-            </li>
-            <li class="hover:cursor-pointer hover:text-very-dark-violet-ensure">
-              <a href="">account</a>
-            </li>
-            <li>
-              <a class="border py-2 px-2 text-very-dark-violet-ensure border-very-dark-violet-ensure hover:bg-very-dark-violet-ensure hover:text-very-light-gray-ensure hover:cursor-pointer" >view plans</a>
-            </li>
-          </ul>
-        </nav>
+        <div class="flex items-center">
+          <div class="sm:hidden">
+            <svg (click)="toggleMenuState()" *ngIf="!menuMobile()" xmlns="http://www.w3.org/2000/svg" width="32" height="32"><g fill="none" fill-rule="evenodd"><path fill="#FFF" stroke="#2C2830" stroke-width="1.5" d="M.75.75h30.5v30.5H.75z"/><g fill="#2C2830"><path d="M8 10h16v1.5H8zM8 15h16v1.5H8zM8 20h16v1.5H8z"/></g></g></svg>
+            <svg (click)="toggleMenuState()" *ngIf="menuMobile()" xmlns="http://www.w3.org/2000/svg" width="32" height="32"><g fill="none" fill-rule="evenodd"><path fill="#FFF" stroke="#2C2830" stroke-width="1.5" d="M.75.75h30.5v30.5H.75z"/><g fill="#2C2830"><path d="M10.873 9.563l11.314 11.314-1.06 1.06L9.813 10.623z"/><path d="M9.813 20.877L21.127 9.563l1.06 1.06-11.314 11.314z"/></g></g></svg>
+          </div>
+          <nav class="hidden sm:block">
+            <ul class="flex items-center gap-x-8 uppercase text-sm text-dark-grayish-violet-ensure font-semibold xl:gap-x-10">
+              <li class="hover:cursor-pointer hover:text-very-dark-violet-ensure">
+                <a href="">how we work</a>
+              </li>
+              <li class="hover:cursor-pointer hover:text-very-dark-violet-ensure">
+                <a href="">blog</a>
+              </li>
+              <li class="hover:cursor-pointer hover:text-very-dark-violet-ensure">
+                <a href="">account</a>
+              </li>
+              <li>
+                <a class="border py-2 px-2 text-very-dark-violet-ensure border-very-dark-violet-ensure hover:bg-very-dark-violet-ensure hover:text-very-light-gray-ensure hover:cursor-pointer" >view plans</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </div>
   </header>
@@ -67,7 +70,7 @@
           <div class="flex flex-col items-center sm:items-start">
             <hr class="w-28 text-dark-violet-ensure xl:border-2" />
             <h2 class="font-DMserifDisplay text-3xl mt-5 xl:text-5xl xl:mt-12" >We're different</h2>
-            <section class="w-full mt-16 mb-24 flex flex-col gap-y-10 sm:flex-row sm:justify-between">
+            <section class="w-full mt-16 mb-24 flex flex-col items-center gap-y-10 sm:flex-row sm:justify-between">
               <ng-container *ngFor="let item of cards" >
                 <app-card [card]="item" />
               </ng-container>
@@ -144,6 +147,35 @@
     </section>
   </footer>
 </div>
+
+
+<!-- Menu mobile -->
+<ng-container *ngIf="menuMobile()" >
+  <div class="absolute inset-0 bg-very-dark-violet-ensure sm:hidden">
+    <div class="flex items-center justify-between h-16 bg-very-light-gray-ensure px-6">
+      <figure>
+        <img src="./../../../../assets/insure/images/logo.svg" alt="logo">
+      </figure>
+      <svg (click)="toggleMenuState()" xmlns="http://www.w3.org/2000/svg" width="32" height="32"><g fill="none" fill-rule="evenodd"><path fill="#FFF" stroke="#2C2830" stroke-width="1.5" d="M.75.75h30.5v30.5H.75z"/><g fill="#2C2830"><path d="M10.873 9.563l11.314 11.314-1.06 1.06L9.813 10.623z"/><path d="M9.813 20.877L21.127 9.563l1.06 1.06-11.314 11.314z"/></g></g></svg>
+    </div>
+
+    <ul class="flex flex-col items-center gap-y-6 uppercase text-lg font-medium py-10 text-very-light-gray-ensure">
+      <li>
+        <a href="">how we work</a>
+      </li>
+      <li>
+        <a href="">blog</a>
+      </li>
+      <li>
+        <a href="">account</a>
+      </li>
+      <li>
+        <a class="border py-2 px-2 text-very-light-gray-ensure border-very-light-gray-ensure hover:bg-very-light-gray-ensure hover:text-very-dark-violet-ensure hover:cursor-pointer" >view plans</a>
+      </li>
+    </ul>
+
+  </div>
+</ng-container>
 
 
 

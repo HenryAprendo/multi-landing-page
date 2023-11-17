@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardComponent } from '../card/card.component';
 import { cards } from '../../../data/card-different';
@@ -17,5 +17,11 @@ export class InsureComponent {
   cards = cards.slice();
 
   links = links.slice();
+
+  menuMobile = signal(false);
+
+  toggleMenuState(){
+    this.menuMobile.update(state => !state);
+  }
 
 }
