@@ -1,13 +1,15 @@
 import { Component, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule, RouterOutlet, Router} from '@angular/router';
+import { RouterModule, RouterOutlet, Router, ChildrenOutletContexts} from '@angular/router';
+import { slideInAnimation } from './animations/animations'
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule, RouterOutlet, RouterModule],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  animations: [slideInAnimation]
 })
 export class AppComponent {
 
@@ -18,6 +20,8 @@ export class AppComponent {
   private length = this.routeList.length-1;
 
   private position = signal(0);
+
+  constructor(private contexts: ChildrenOutletContexts){ }
 
   nextRoute(){
     if(this.position() >= 0 && this.position() < this.length){
@@ -44,4 +48,23 @@ export class AppComponent {
     this.router.navigate([this.routeList[position]]);
   }
 
+  getRouteAnimationData(){
+    return this.contexts.getContext('primary')?.route?.snapshot.data?.['animation'];
+  }
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

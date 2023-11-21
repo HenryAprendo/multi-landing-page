@@ -10,10 +10,12 @@ export const routes: Routes = [
   },
   {
     path: 'loopStudios',
-    component: LoopStudiosComponent
+    component: LoopStudiosComponent,
+    data: {animation: 'LoopStudiosPage'}
   },
   {
     path: 'insure',
-    component: InsureComponent
+    component: InsureComponent,
+    data: { animation: 'InsurePage'}
   }
 ];
