@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule, RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet, Router} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,5 +10,38 @@ import { RouterModule, RouterOutlet } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'multi-landing-page';
+
+  private router = inject(Router);
+
+  private routeList = ['loopStudios','insure'];
+
+  private length = this.routeList.length-1;
+
+  private position = signal(0);
+
+  nextRoute(){
+    if(this.position() >= 0 && this.position() < this.length){
+      this.position.update(position => position + 1);
+      this.navigateTo();
+    }
+    else {
+      this.position.set(0)
+      this.navigateTo();
+    }
+  }
+
+  previousRoute(){
+    this.position.update(position => position - 1);
+    if(this.position() < 0){
+      this.navigateTo(this.length)
+      this.position.set(this.length)
+    } else {
+      this.navigateTo();
+    }
+  }
+
+  private navigateTo(position = this.position()){
+    this.router.navigate([this.routeList[position]]);
+  }
+
 }

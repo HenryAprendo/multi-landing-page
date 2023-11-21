@@ -5,8 +5,15 @@ import { InsureComponent } from './components/projectTwo/insure/insure.component
 export const routes: Routes = [
   {
     path: '',
-    component: InsureComponent
+    redirectTo: 'loopStudios',
+    pathMatch: 'full'
   },
-
-
+  {
+    path: 'loopStudios',
+    component: LoopStudiosComponent
+  },
+  {
+    path: 'insure',
+    component: InsureComponent
+  }
 ];
